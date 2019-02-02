@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>江苏省南通中学望岳奖学金</title>
+<link rel="shortcut icon" href="./icons/12.ico" >
+<link rel="icon" href="./icons/12.ico" type="image/x-icon" >
+<link rel="bookmark" href="./icons/12.ico" type="image/x-icon" >
+<link href="https://cdn.bootcss.com/fullPage.js/3.0.4/fullpage.min.css" rel="stylesheet">
+<style>
+	#hello{background-color:#2b73af;color: white;}
+	#intro1{background-color:#55bb8a}
+	#intro2-1{background-color:#d2d97a}
+	#intro2-2{background-color:#e2d849}
+	#intro2-3{background-color:#fbda41}
+	#end{background-color:#ff9900}
+	a{text-decoration: none}
+	.button 
+	{
+		padding: .7rem .15rem;
+    	background: #fff;
+    	border-radius: 10px;
+		display:inline-block;
+		color: #ff5f45;
+		width:5%;
+		font-family: "rui";
+	}
+	.footer
+	{
+		vertical-align: bottom;
+	}
+	@font-face
+	{
+		font-family: 'rui';
+    	src : url('./font/21.ttf');
+		font-weight: normal;
+		font-style: normal;
+	}
+	body,td,th 
+	{
+		font-family: "rui";
+	}
+
+	@media (max-width: 964px)
+	{
+		.button{width:48px;}
+	}
+</style>
+</head>
+
+<body>
+
+	<div id="fullpage" align="center">
+        <div class="section " id="hello" >
+			<h1> 江苏省南通中学望岳奖学金</h1>
+			<h2> ssdsd </h2>
+		</div>
+	    <div class="section" id="intro1">Some section</div>
+	    <div class="section" >
+			<div class="slide" data-anchor="slide1" id="intro2-1"> 
+			几个小项目目录
+			</div>
+			<div class="slide" data-anchor="slide2" id="intro2-2"> 大的1
+			</div>
+			<div class="slide" data-anchor="slide3" id="intro2-3"> 大的2
+			</div>
+		
+		</div>
+	    <div class="section" id="end">
+            <h1>关于我们</h1>
+            <h2>我们是xxxx</h2>
+			 
+				<div class="footer">	
+					<a class="button">极客社</a>
+					<a class="button" href="http://www.ntzx.cn" >南通中学</a>	
+					<a class="button">云平台</a>
+			    </div>
+		
+               
+        </div>
+    </div>
+	
+	<script src="https://cdn.bootcss.com/fullPage.js/3.0.4/fullpage.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script >
+		(function($) {
+
+    $.fn.fontFlex = function(min, max, mid) {
+
+        var $this = this;
+
+        $(window).resize(function() {
+
+            var size = window.innerWidth / mid;
+
+            if (size < min) size = min;
+            if (size > max) size = max;
+
+            $this.css('font-size', size + 'px');
+
+        }).trigger('resize');
+    };
+
+})(jQuery);
+	</script>
+	<script type="text/javascript">
+        new fullpage('#fullpage', {
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            navigationTooltips: ['欢迎', '概况', '我们', '关于'],
+            css3: true,
+			menu: '#menu',
+            scrollingSpeed: 1000,
+            navigation: true,
+            slidesNavigation: true,
+            responsiveHeight: 330,
+            controlArrows: false,
+			scrollBar:true,
+			scrollOverflow:true
+			
+        });
+		
+  
+          
+	   $(function() {
+                
+                $('h1').fontFlex(20, 60, 35);
+                $('h2').fontFlex(10, 20, 15);
+		        $('a').fontFlex(5, 10, 6.5);
+            });
+                    
+      
+    </script>
+
+</body>
+</html>
