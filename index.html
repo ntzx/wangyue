@@ -4,10 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>江苏省南通中学望岳奖学金</title>
-<link rel="shortcut icon" href="./icons/13.ico" >
-<link rel="icon" href="./icons/13.ico" type="image/x-icon" >
-<link rel="bookmark" href="./icons/13.ico" type="image/x-icon" >
+<link rel="shortcut icon" href="./icons/13.png" >
+<link rel="icon" href="./icons/13.png" type="image/x-icon" >
+<link rel="bookmark" href="./icons/13.png" type="image/x-icon" >
 <link href="https://cdn.bootcss.com/fullPage.js/3.0.4/fullpage.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/fullPage.js/3.0.4/fullpage.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+		(function($) {
+
+		$.fn.fontFlex = function(min, max, mid) {
+
+        var $this = this;
+
+        $(window).resize(function() {
+
+            var size = window.innerWidth / mid;
+
+            if (size < min) size = min;
+            if (size > max) size = max;
+
+            $this.css('font-size', size + 'px');
+
+        }).trigger('resize');
+		};
+
+		})(jQuery);
+</script>
 <style>
 	#hello{background-color:indianred;color: white;}
 	#intro1{background-color:#55bb8a;
@@ -61,86 +84,61 @@
 	  display: grid;
 	  grid-template-columns: repeat(3, 1fr);
 	  grid-gap: 10px;
-	  grid-auto-rows: minmax(100px, auto);
+	  grid-auto-rows: minmax(100px, 6);
 	  font-size:25px;
 	  padding-left: 10%;
 	  padding-right: 10%;
-	  padding-top:3%;
+	  vertical-align: middle;
 	}
 	.one {
 	  grid-column: 1;
-	  grid-row: 1/3;
+	  grid-row: 2/4;
 	}
 	.two { 
 	  grid-column: 3 ;
-	  grid-row: 1 / 3;
+	  grid-row: 2/ 4;
 	}
 	.three {
-	  grid-row: 3/ 5;
+	  grid-row: 4/ 6;
 	  grid-column: 1;
 	}
 	.four {
 	  grid-column: 3;
-	  grid-row: 3/5;
+	  grid-row: 4/6;
 	}
 	.five {
 	  grid-column: 2;
-	  grid-row: 2/4;
+	  grid-row: 3/5;
 	}
 	#text{text-align: left}
+	.me{font-weight: 900;}
+	@media (max-width: 1446px){.one,.two,.three,.four,.five{font-size:15px;font-weight: 700;vertical-align:  text-bottom ;margin-bottom: 10px;} .me{font-size:18px;font-weight: 900;}}
+	@media screen and (orientation: landscape) {   
+		.one {
+		  grid-column: 1;
+		  grid-row: 1/3;
+		}
+		.two { 
+		  grid-column: 3 ;
+		  grid-row: 1/ 3;
+		}
+		.three {
+		  grid-row: 3/5;
+		  grid-column: 1;
+		}
+		.four {
+		  grid-column: 3;
+		  grid-row: 3/5;
+		}
+		.five {
+		  grid-column: 2;
+		  grid-row: 2/4;
+		}
+    }  
 </style>
 </head>
 
 <body>
-
-	<div id="fullpage" align="center">
-        <div class="section " id="hello" >
-			<h1> 江苏省南通中学望岳奖学金</h1>
-			<h2>  </h2>
-		</div>
-	    <div class="section" id="intro1"  >
-			<h1>
-			奖学金介绍
-			</h1>
-			<div id="text">
-				   　　望岳奖学金旨在激励通中学子们在科技创新上不断进取，不断发现，不断创造，自2016年第一届奖学金举办来，给了有才能的学生一个展现自己的舞台，更给学生以激励，让更多的学生了解和投入到科技创新的实践中。每一个项目的确定到开发再到实践，都以学生为主导，过程不仅提高了学生独立开发，自主实践的能力，同时也促进学生创新意识的提升。望岳奖学金的设立，让通中校园内科技创新的氛围日渐浓厚，学生们的创新热情日益增长。
-			</div>
-		</div>
-	    <div class="section" >
-			<div class="slide" data-anchor="slide1" id="intro2-1"> 
-				<div style="font-size:35px">
-				获奖展示
-				</div>
-				<div class="grid">
-					<div class="one">2016 <br/>仰望星空奖 <br/>  张嘉麒</div>
-					<div class="two">2016 <br/>安全卫士奖 <br/>  黄曹阳</div>
-					<div class="three">2016 <br/>凌绝望岳奖 <br/>  周鹤洋</div>
-					<div class="four">2016 <br/>坚韧登岳奖  <br/> 蒋政廷</div>
-					<div class="five">2017 <br/>坚韧登岳奖 <br/>  于吴桐 <br/>周子皓</div>
-				</div>
-			</div>
-		
-		</div>
-	    <div class="section" id="end">
-            <h1>关于我们</h1>
-            <h2>
-				这是一个由NTZX DEVELOPERS制作的网站
-				<br/>
-				我们是通中一群热爱科技的学生
-			</h2>
-			 
-				<div class="footer">	
-					<a class="button">极客社</a>
-					<a class="button" href="http://www.ntzx.cn" >南通中学</a>	
-					<a class="button">云平台</a>
-			    </div>
-		
-               
-        </div>
-    </div>
-	
-	<script src="https://cdn.bootcss.com/fullPage.js/3.0.4/fullpage.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		(function($) {
 
@@ -162,6 +160,61 @@
 
 		})(jQuery);
 	</script>
+	<script>        
+	   $(function() {
+                
+                $('h1').fontFlex(24, 60, 35);
+		        $('a').fontFlex(5, 10, 6.5);
+            });
+                    
+      
+    </script>
+	<div id="fullpage" align="center">
+        <div class="section " id="hello" >
+			<h1> 江苏省南通中学望岳奖学金</h1>
+			<h2>  </h2>
+		</div>
+	    <div class="section" id="intro1"  >
+			<h1>
+			奖学金介绍
+			</h1>
+			<div id="text">
+				   　　望岳奖学金旨在激励通中学子们在科技创新上不断进取，不断发现，不断创造，自2016年第一届奖学金举办来，给了有才能的学生一个展现自己的舞台，更给学生以激励，让更多的学生了解和投入到科技创新的实践中。每一个项目的确定到开发再到实践，都以学生为主导，过程不仅提高了学生独立开发，自主实践的能力，同时也促进学生创新意识的提升。望岳奖学金的设立，让通中校园内科技创新的氛围日渐浓厚，学生们的创新热情日益增长。
+			</div>
+		</div>
+	    <div class="section" id="intro2-1"  >
+			
+				<div style="font-size:35px">
+				
+				</div>
+				<div class><h1>获奖展示</h1></div>
+				<div class="grid">
+					<div class="one">2016 <br/>仰望星空奖 <br/>  张嘉麒</div>
+					<div class="two">2016 <br/>安全卫士奖 <br/>  黄曹阳</div>
+					<div class="three">2016 <br/>凌绝望岳奖 <br/>  周鹤洋</div>
+					<div class="four">2016 <br/>坚韧登岳奖  <br/> 蒋政廷</div>
+					<div class="five">2017 <br/>坚韧登岳奖 <br/>  于吴桐 <br/>周子皓</div>
+				</div>
+			
+		
+		</div>
+	    <div class="section" id="end">
+            <h1>关于我们</h1>
+            <h2>
+				这是一个由NTZX DEVELOPERS制作的网站
+				<br/>
+				我们是通中一群热爱科技的学生
+			</h2>
+			 
+				<div class="footer">	
+					<a class="button">极客社</a>
+					<a class="button" href="http://www.ntzx.cn" >南通中学</a>	
+					<a class="button">云平台</a>
+			    </div>
+		
+               
+        </div>
+    </div>
 	<script type="text/javascript">
         new fullpage('#fullpage', {
             anchors: ['page1', 'page2', 'page3', 'page4'],
@@ -172,21 +225,12 @@
             slidesNavigation: true,
             responsiveHeight: 330,
             controlArrows: false,
-			scrollBar:true,
 			scrollOverflow:true
 			
         });
 		
+     </script>
   
-          
-	   $(function() {
-                
-                $('h1').fontFlex(20, 60, 35);
-		        $('a').fontFlex(5, 10, 6.5);
-            });
-                    
-      
-    </script>
 
 </body>
 </html>
