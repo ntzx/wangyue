@@ -112,7 +112,7 @@
 	}
 	#text{text-align: left}
 	.me{font-weight: 900;}
-	@media (max-width: 1446px){.one,.two,.three,.four,.five{font-size:15px;font-weight: 700;vertical-align:  text-bottom ;margin-bottom: 10px;} .me{font-size:18px;font-weight: 900;}}
+	@media (max-width : 1329px ){.one,.two,.three,.four,.five{font-size:15px;font-weight: 700;vertical-align:  text-bottom ;margin-bottom: 10px;} .me{font-size:18px;font-weight: 900;}}
 	@media screen and (orientation: landscape) {   
 		.one {
 		  grid-column: 1;
@@ -136,31 +136,7 @@
 		}
     }  
 </style>
-</head>
-
-<body>
-	<script>
-		(function($) {
-
-		$.fn.fontFlex = function(min, max, mid) {
-
-        var $this = this;
-
-        $(window).resize(function() {
-
-            var size = window.innerWidth / mid;
-
-            if (size < min) size = min;
-            if (size > max) size = max;
-
-            $this.css('font-size', size + 'px');
-
-        }).trigger('resize');
-		};
-
-		})(jQuery);
-	</script>
-	<script>        
+<script>        
 	   $(function() {
                 
                 $('h1').fontFlex(24, 60, 35);
@@ -168,7 +144,10 @@
             });
                     
       
-    </script>
+</script>
+</head>
+
+<body>
 	<div id="fullpage" align="center">
         <div class="section " id="hello" >
 			<h1> 江苏省南通中学望岳奖学金</h1>
